@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "outDir": "../static",
+        "module": "commonjs",
+        "noImplicitAny": false,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "target": "es5",
+        "jsx": "react",
+        "sourceMap": true,
+        "moduleResolution": "node",
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "lib": [
+            "es2015",
+            "es2017.object",
+            "dom"
+        ]
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "acura",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Dino Petrone",
+  "devDependencies": {
+    "awesome-typescript-loader": "^3.4.1",
+    "browser-sync": "^2.18.13",
+    "coffee": "^4.1.0",
+    "framerjs": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-coffee": "^2.3.5",
+    "gulp-sketch": "^1.0.5",
+    "gulp-typescript": "^3.2.3",
+    "gulp-util": "^3.0.8",
+    "gulp-watch": "^4.3.11",
+    "typescript": "^2.6.2",
+    "webpack": "^3.10.0",
+    "webpack-stream": "^4.0.0"
+  }
+}
