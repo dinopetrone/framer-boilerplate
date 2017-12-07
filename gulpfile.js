@@ -27,6 +27,9 @@ gulp.task('copy', function () {
     gulp.src('src/images/**/*.{png, jpg, svg}')
         .pipe(gulp.dest(path.join(buildPath, 'images')))
 
+    gulp.src('src/fonts/**/*')
+        .pipe(gulp.dest(path.join(buildPath, 'fonts')))
+
     gulp.src('src/css/**/*.css')
         .pipe(gulp.dest(buildPath))
 

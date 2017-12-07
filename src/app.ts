@@ -1,5 +1,6 @@
-import "./device"
+require("./utils/fonts")
 
+import "./device"
 import HeroScrollView from "./views/HeroScrollView"
 
 

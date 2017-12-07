@@ -1,4 +1,3 @@
-
 export default class extends Framer.PageComponent {
     width = 700
     height = 250
@@ -62,7 +61,8 @@ export default class extends Framer.PageComponent {
             parent: page,
             style: {
                 fontSize: "160px",
-                textAlign: "center"
+                textAlign: "center",
+                fontFamily: "Lato Regular",
             }
         })
 
