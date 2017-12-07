@@ -8,6 +8,7 @@
     "browser-sync": "^2.18.13",
     "coffee": "^4.1.0",
     "coffee-loader": "^0.9.0",
+    "coffeescript": "^2.0.3",
     "framerjs": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-coffee": "^2.3.5",
