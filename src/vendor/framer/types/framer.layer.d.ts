@@ -1,39 +1,4 @@
-
-
-
-
 declare namespace Framer {
-    export class DeviceView {
-        constructor(options?: any);
-        readonly context: any
-        readonly platform: string;
-        readonly screenSize: any;
-        readonly isPortrait: boolean;
-        readonly isLandscape: boolean;
-        readonly handSwitchingSupported: boolean;
-        readonly nextHand: any | boolean;
-
-        fullScreen: boolean;
-        deviceType: string;
-        hideBezel: boolean;
-        deviceScale: number;
-        contentScale: number;
-        orientation: any;
-        orientationName: string;
-        screen: Screen
-
-        setupContext(): void;
-        customize(deviceProps: any): void;
-        setDeviceScale(deviceScale: number, animate: boolean): void;
-        setContentScale(contentScale: number, animate: boolean): void;
-        setOrientation(orientation: any, animate: boolean, suggestedSize: any | null): void;
-        rotateLeft(animate: boolean): void;
-        rotateRight(animate: boolean): void;
-        setHand(hand: any): void;
-        handImageUrl(hand: any): string;
-        toInspect(): string;
-        prepareForSnapshot(): void;
-    }
 
     interface LayerOptions {
         context?: any
@@ -273,73 +238,6 @@ declare namespace Framer {
         animate(val: string, opts?: {}): void
     }
 
-    export class Screen {
-        constructor(options?: any);
-        static readonly width: number;
-        static readonly height: number;
-        static readonly canvasFrame: number;
-        static readonly midX: number;
-        static readonly midY: number;
-        static readonly size: any;
-        static readonly frame: any;
-        static readonly device: Framer.DeviceView;
-        static backgroundColor: any;
-        static perspective: any;
-        static perspectiveOriginX: any;
-        static perspectiveOriginY: any;
-
-        toInspect(): void;
-        onResize(cb: () => void): void;
-        convertPointToLayer(point: any, layer: any): any;
-        convertPointToCanvas(point: any): any;
-
-        onEdgeSwipe(cb: () => void): void;
-        onEdgeSwipeStart(cb: () => void): void;
-        onEdgeSwipeEnd(cb: () => void): void;
-
-        onEdgeSwipeTop(cb: () => void): void;
-        onEdgeSwipeTopStart(cb: () => void): void;
-        onEdgeSwipeTopEnd(cb: () => void): void;
-
-        onEdgeSwipeRight(cb: () => void): void;
-        onEdgeSwipeRightStart(cb: () => void): void;
-        onEdgeSwipeRightEnd(cb: () => void): void;
-
-        onEdgeSwipeBottom(cb: () => void): void;
-        onEdgeSwipeBottomStart(cb: () => void): void;
-        onEdgeSwipeBottomEnd(cb: () => void): void;
-
-        onEdgeSwipeLeft(cb: () => void): void;
-        onEdgeSwipeLeftStart(cb: () => void): void;
-        onEdgeSwipeLeftEnd(cb: () => void): void;
-    }
-
-
-    export class PageComponent extends Layer {
-        readonly content: any
-        velocityThreshold: any
-        closestPage: any
-        currentPage: any
-        previousPage: any
-
-        constructor(options?: LayerOptions);
-        addPage(layer: any, dir?: string): void
-        snapToPage(page: Framer.Layer, animate?: boolean, options?: any)
-        nextPage(direction?: string, currentPage?: any, withoutCurrentPage?: boolean)
-        snapToNextPage(direction?: string, animate?: boolean, animationOptions?: any)
-        snapToPreviousPage(animate?: boolean, animationOptions?: any)
-        addPage(page: any, direction?: string)
-        horizontalPageIndex(page: any): number
-        verticalPageIndex(page: any): number
-    }
-
-    export class Align {
-        static center(layer: Layer, property, offset?: number): any
-        static left(layer: Layer, property, offset?: number): any
-        static right(layer: Layer, property, offset?: number): any
-        static top(layer: Layer, property, offset?: number): any
-        static bottom(layer: Layer, property, offset?: number): any
-    }
 
 }
 
