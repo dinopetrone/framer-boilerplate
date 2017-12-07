@@ -1,5 +1,4 @@
 
-
 interface LayerOptions {
     backgroundColor?: string
     x?: number

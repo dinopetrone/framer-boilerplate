@@ -5,11 +5,11 @@ var config = {
     context: path.join(__dirname, 'src'),
 
     entry: {
-        "app":  "./app.ts",
+        "app": "./app.ts",
     },
 
     output: {
-        filename:      "[name].js",
+        filename: "[name].js",
         chunkFilename: "[id].chunck.[ext]"
     },
 
@@ -23,6 +23,7 @@ var config = {
                     configFileName: './tsconfig.json'
                 }
             },
+            { test: /\.coffee$/, loader: "coffee-loader" }
         ]
     },
 
@@ -32,8 +33,8 @@ var config = {
 
     devtool: "source-map",
     resolve: {
-        extensions: [".webpack.js", "web.js", ".ts", ".tsx", ".js"],
-        modules: ["node_modules", "vendor"]
+        extensions: [".webpack.js", "web.js", ".ts", ".tsx", ".js", ".coffee"],
+        modules: ["node_modules", "vendor", "src/modules"]
     },
 }
 
