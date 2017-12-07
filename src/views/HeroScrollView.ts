@@ -17,7 +17,8 @@ export default class extends Framer.PageComponent {
         this.colorArr = pageItems
         this.initNav()
         this.initTabs()
-        this.tabs[0].states.switchInstant("active")
+
+        this.tabs[0].animate("active", { instant: true })
         this.on("change:currentPage", this.onPageChange)
     }
 
@@ -110,9 +111,9 @@ export default class extends Framer.PageComponent {
 
         this.tabs.forEach((tab, index) => {
             if (index == currentPageIndex) {
-                tab.states.switch("active")
+                tab.animate("active")
             } else {
-                tab.states.switch("default")
+                tab.animate("default")
             }
         })
 

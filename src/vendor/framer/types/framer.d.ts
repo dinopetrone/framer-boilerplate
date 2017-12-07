@@ -270,6 +270,7 @@ declare namespace Framer {
         addListener(eventName: string, listener: Function): void
         on(eventName: string, listener: Function): void
         horizontalPageIndex(page: any): number
+        animate(val: string, opts?: {}): void
     }
 
     export class Screen {
