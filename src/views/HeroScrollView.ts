@@ -43,6 +43,7 @@ export default class extends Framer.PageComponent {
     }
 
     addItem(color: string, x: number, index: number) {
+
         let page = new Framer.Layer({
             size: this.size,
             backgroundColor: color,
@@ -50,6 +51,7 @@ export default class extends Framer.PageComponent {
             parent: this.content,
             name: index
         })
+
         let pageName = new Framer.Layer({
             html: index + 1,
             width: 100,
@@ -63,6 +65,7 @@ export default class extends Framer.PageComponent {
                 textAlign: "center"
             }
         })
+
         let tab = new Framer.Layer({
             backgroundColor: page.backgroundColor,
             parent: this.navBar,
@@ -72,6 +75,7 @@ export default class extends Framer.PageComponent {
             opacity: 0.4,
             name: index
         })
+
         let buttonName = new Framer.Layer({
             html: index + 1,
             width: tab.width,
@@ -86,6 +90,7 @@ export default class extends Framer.PageComponent {
                 lineHeight: `${tab.height}px`
             }
         })
+
         tab.states = {
             active: {
                 opacity: 1
@@ -96,6 +101,7 @@ export default class extends Framer.PageComponent {
         tab.onTap(() => {
             this.snapToPage(page)
         })
+
     }
 
     onPageChange(currentPage) {
