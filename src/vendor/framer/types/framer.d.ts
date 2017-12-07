@@ -1,11 +1,5 @@
 
-interface LayerOptions {
-    backgroundColor?: string
-    x?: number
-    y?: number
-    image?: string
 
-}
 
 
 declare namespace Framer {
@@ -41,89 +35,222 @@ declare namespace Framer {
         prepareForSnapshot(): void;
     }
 
+    interface LayerOptions {
+        context?: any
+        label?: any
+        custom?: any
+        animationOptions?: any
+        ignoreEvents?: boolean
+        width?: number
+        height?: number
+        visible?: boolean
+        opacity?: number
+        index?: number
+        clip?: any
+        scrollHorizontal?: boolean
+        scrollVertical?: boolean
+        scroll?: any
+        x?: number | Function
+        y?: number | Function
+        z?: number | Function
+        scaleX?: number
+        scaleY?: number
+        scaleZ?: number
+        skewX?: number
+        skewY?: number
+        skew?: number
+        scale?: number
+        originX?: number
+        originY?: number
+        originZ?: number
+        perspective?: any
+        perspectiveOriginX?: any
+        perspectiveOriginY?: any
+        rotationX?: number
+        rotationY?: number
+        rotationZ?: number
+        rotation?: number
+        blur?: any
+        brightness?: any
+        saturate?: any
+        hueRotate?: any
+        contrast?: any
+        invert?: any
+        grayscale?: any
+        sepia?: any
+        blending?: any
+        backgroundBlur?: any
+        backgroundBrightness?: any
+        backgroundSaturate?: any
+        backgroundHueRotate?: any
+        backgroundContrast?: any
+        backgroundInvert?: any
+        backgroundGrayscale?: any
+        backgroundSepia?: any
+        shadow?: any
+        shadows?: any
+        backgroundColor?: any
+        color?: any
+        borderRadius?: any
+        borderColor?: any
+        borderWidth?: any
+        borderStyle?: any
+        force2d?: any
+        flat?: any
+        backfaceVisible?: any
+        name?: any
+        matrix?: any
+        transformMatrix?: any
+        matrix3d?: any
+        cornerRadius?: any
+        point?: any
+        size?: any
+        frame?: any
+        minX?: number
+        midX?: number
+        maxX?: number
+        minY?: number
+        midY?: number
+        maxY?: number
+        constraintValues?: any
+        htmlIntrinsicSize?: any
+        canvasFrame?: any
+        screenFrame?: any
+        style?: any
+        classList?: any
+        html?: any
+        image?: string
+        gradient?: any
+        parent?: any
+        children?: any
+        siblings?: any
+        descendants?: any
+        superLayer?: any
+        subLayers?: any
+        siblingLayers?: any
+        isAnimating?: any
+        states?: any
+        stateNames?: any
+        draggable?: any
+        pinchable?: any
+        scrollFrame?: any
+        scrollX?: number
+        scrollY?: number
+        shadowX?: number
+        shadowY?: number
+        shadowBlur?: number
+        shadowColor?: string
+
+    }
+
     export class Layer {
 
-        readonly context: any
-        readonly transformMatrix: any;
-        readonly matrix3d: any;
+        static context?: any
+        label?: any
+        custom?: any
+        animationOptions?: any
+        ignoreEvents?: boolean
+        width?: number
+        height?: number
+        visible?: boolean
+        opacity?: number
+        index?: number
+        clip?: any
+        scrollHorizontal?: boolean
+        scrollVertical?: boolean
+        scroll?: any
+        x?: number | Function
+        y?: number | Function
+        z?: number | Function
+        scaleX?: number
+        scaleY?: number
+        scaleZ?: number
+        skewX?: number
+        skewY?: number
+        skew?: number
+        scale?: number
+        originX?: number
+        originY?: number
+        originZ?: number
+        perspective?: any
+        perspectiveOriginX?: any
+        perspectiveOriginY?: any
+        rotationX?: number
+        rotationY?: number
+        rotationZ?: number
+        rotation?: number
+        blur?: any
+        brightness?: any
+        saturate?: any
+        hueRotate?: any
+        contrast?: any
+        invert?: any
+        grayscale?: any
+        sepia?: any
+        blending?: any
+        backgroundBlur?: any
+        backgroundBrightness?: any
+        backgroundSaturate?: any
+        backgroundHueRotate?: any
+        backgroundContrast?: any
+        backgroundInvert?: any
+        backgroundGrayscale?: any
+        backgroundSepia?: any
+        shadow?: any
+        shadows?: any
+        backgroundColor?: any
+        color?: any
+        borderRadius?: any
+        borderColor?: any
+        borderWidth?: any
+        borderStyle?: any
+        force2d?: any
+        flat?: any
+        backfaceVisible?: any
+        name?: any
+        matrix?: any
+        transformMatrix?: any
+        matrix3d?: any
+        cornerRadius?: any
+        point?: any
+        size?: any
+        frame?: any
+        minX?: number
+        midX?: number
+        maxX?: number
+        minY?: number
+        midY?: number
+        maxY?: number
+        constraintValues?: any
+        htmlIntrinsicSize?: any
+        canvasFrame?: any
+        screenFrame?: any
+        style?: any
+        classList?: any
+        html?: any
+        image?: string
+        gradient?: any
+        parent?: any
+        children?: any
+        siblings?: any
+        descendants?: any
+        superLayer?: any
+        subLayers?: any
+        siblingLayers?: any
+        isAnimating?: any
+        states?: any
+        stateNames?: any
+        draggable?: any
+        pinchable?: any
+        scrollFrame?: any
+        scrollX?: number
+        scrollY?: number
+        shadowX?: number
+        shadowY?: number
+        shadowBlur?: number
+        shadowColor?: string
 
-        label: string;
-        custom: any;
-        animationOptions: any;
-        ignoreEvents: boolean;
-        width: number;
-        height: number;
-        visible: boolean;
-        opacity: number;
-        index: number;
-        clip: boolean;
-        scrollHorizontal: boolean;
-        scrollVertical: boolean;
-        scroll: boolean;
-        x: number;
-        y: number;
-        z: number;
-        scaleX: number;
-        scaleY: number;
-        scaleZ: number;
-        scale: number;
-        skewX: number;
-        skewY: number;
-        skew: number;
-        originX: number;
-        originY: number;
-        originZ: number;
-        perspective: any;
-        perspectiveOriginX: any;
-        perspectiveOriginY: any;
-        rotationX: number;
-        rotationY: number;
-        rotationZ: number;
-        rotation: number;
-        blur: number;
-        brightness: number;
-        saturate: number;
-        hueRotate: number;
-        contrast: number;
-        invert: number;
-        grayscale: number;
-        sepia: number;
-        blending: string;
-        backgroundBlur: number;
-        backgroundBrightness: number;
-        backgroundSaturate: number;
-        backgroundHueRotate: number;
-        backgroundContrast: number;
-        backgroundInvert: number;
-        backgroundGrayscale: number;
-        backgroundSepia: number;
 
-        shadows: any;
-        backgroundColor: any;
-        color: any;
-        borderRadius: number;
-        borderColor: any;
-        borderWidth: number;
-        borderStyle: any;
-        force2d: boolean;
-        flat: boolean;
-        backfaceVisible: boolean;
-        name: string;
-        matrix: any;
-        cornerRadius: number;
-        point: any;
-        size: any;
-        frame: any;
-        minX: number;
-        midX: number;
-        maxX: number;
-        minY: number;
-        midY: number;
-        maxY: number;
-        constraintValues: any;
-        htmlIntrinsicSize: any;
-        canvasFrame: any;
-        screenFrame: any;
 
         constructor(options?: LayerOptions);
         updateShadowsProperty(prop, value): void;
@@ -138,7 +265,11 @@ declare namespace Framer {
         centerFrame(): any;
         center(): any;
         onClick(fn: () => void): void
+        onTap(fn: () => void): void
         destroy(): void
+        addListener(eventName: string, listener: Function): void
+        on(eventName: string, listener: Function): void
+        horizontalPageIndex(page: any): number
     }
 
     export class Screen {
@@ -183,16 +314,22 @@ declare namespace Framer {
     }
 
 
-    interface PageComponentOptions {
-        height?: number
-        backgroundColor?: string
-        width?: number
-        scrollVertical?: boolean
-        contentInset?: any
+    export class PageComponent extends Layer {
+        readonly content: any
+
+        constructor(options?: LayerOptions);
+        addPage(layer: any, dir?: string): void
+        // page, animate = true, animationOptions = null
+        snapToPage(page: Framer.Layer, animate?: boolean, options?: any)
+
     }
 
-    export class PageComponent {
-        constructor(options?: PageComponentOptions);
+    export class Align {
+        static center(layer: Layer, property, offset?: number): any
+        static left(layer: Layer, property, offset?: number): any
+        static right(layer: Layer, property, offset?: number): any
+        static top(layer: Layer, property, offset?: number): any
+        static bottom(layer: Layer, property, offset?: number): any
     }
 
 }
