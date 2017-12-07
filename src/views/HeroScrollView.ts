@@ -96,6 +96,7 @@ export default class extends Framer.PageComponent {
                 opacity: 1
             }
         }
+
         this.tabs.push(tab)
 
         tab.onTap(() => {
