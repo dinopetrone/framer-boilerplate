@@ -3,6 +3,8 @@ interface LayerOptions {
     backgroundColor?: string
     x?: number
     y?: number
+    image?: string
+
 }
 
 
@@ -178,6 +180,19 @@ declare namespace Framer {
         onEdgeSwipeLeft(cb: () => void): void;
         onEdgeSwipeLeftStart(cb: () => void): void;
         onEdgeSwipeLeftEnd(cb: () => void): void;
+    }
+
+
+    interface PageComponentOptions {
+        height?: number
+        backgroundColor?: string
+        width?: number
+        scrollVertical?: boolean
+        contentInset?: any
+    }
+
+    export class PageComponent {
+        constructor(options?: PageComponentOptions);
     }
 
 }
